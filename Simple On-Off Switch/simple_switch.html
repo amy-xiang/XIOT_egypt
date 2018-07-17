@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <title> Simple On/Off Switch </title>
+        <title> Simple Switch </title>
+        <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
         <meta charset="UTF-8">
         <style>
             body {
-                background: black;
-                color: white; 
+               background: black;
+               color: white;
+               text-align: center;
+               font-family: 'Questrial',  sans-serif; 
             }
+
+            h1 {
+                font-size: 140px;
+            }
+            
+            button {
+                border-radius: 50%;
+                font-size: 120px;
+                padding: 100px;
+                margin: 50px;
+            }
+
+            button:hover {
+                transition: 0.3s;
+                background: black;
+                color: yellow;
+            }
+
         </style>
     </head>
     <body>
-        <h1> Simple On/Off Switch </h1>
+        <h1> Simple Switch </h1>
         <button type="button"> On </button>
         <button type="button"> Off </button>
     </body>
