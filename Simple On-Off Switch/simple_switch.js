@@ -1,6 +1,6 @@
 function switchOn() {
     var url = 'http://blynk-cloud.com/2674d23861f547c990b570a742954151/update/D14';
-    var data = {payload: 1};
+    var data = {payload: ["1"]};
 
     fetch(url, {
         method: 'PUT', 
@@ -16,7 +16,7 @@ function switchOn() {
 
 function switchOff() {
     var url = 'http://blynk-cloud.com/2674d23861f547c990b570a742954151/update/D4';
-    var data = {payload: 0};
+    var data = {payload: ["0"]};
 
     fetch(url, {
         method: 'PUT', 

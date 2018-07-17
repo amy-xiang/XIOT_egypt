@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title> Toggle Switch </title>
+        <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+        <meta charset="UTF-8">
+        <script src="simple_switch.js"> </script> 
+        <style>
+            body {
+               background: black;
+               color: white;
+               text-align: center;
+               font-family: 'Questrial',  sans-serif; 
+            }
+
+            h1 {
+                font-size: 140px;
+                margin-top: 25px;
+            }
+            
+            button {
+                border-radius: 50%;
+                font-size: 120px;
+                padding: 100px;
+                margin: 50px;
+                margin-top: -10px;
+            }
+
+            h1:hover, button:hover {
+                transition: 0.3s;
+                background: black;
+                color: yellow;
+                font-weight: bold;
+            }
+
+            img {
+                width: 10%;
+                height: auto;
+                position: absolute;
+                bottom:0px;
+                right:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> Toggle Switch </h1>
+        <!-- Initially set the button off  -->
+        <button type="button" onclick="switchOn()"> On </button>
+        <img src="https://xiot.io/wp-content/uploads/2018/03/cropped-XIOT-Bright-Background.png" alt="XIOT">
+    </body>
+</html>
