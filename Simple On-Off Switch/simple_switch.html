@@ -4,6 +4,7 @@
         <title> Simple Switch </title>
         <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
         <meta charset="UTF-8">
+        <script src="simple_switch.js"> </script> 
         <style>
             body {
                background: black;
@@ -14,6 +15,7 @@
 
             h1 {
                 font-size: 140px;
+                margin-top: 25px;
             }
             
             button {
@@ -21,19 +23,29 @@
                 font-size: 120px;
                 padding: 100px;
                 margin: 50px;
+                margin-top: -10px;
             }
 
-            button:hover {
+            h1:hover, button:hover {
                 transition: 0.3s;
                 background: black;
                 color: yellow;
+                font-weight: bold;
             }
 
+            img {
+                width: 10%;
+                height: auto;
+                position: absolute;
+                bottom:0px;
+                right:20px;
+            }
         </style>
     </head>
     <body>
         <h1> Simple Switch </h1>
-        <button type="button"> On </button>
-        <button type="button"> Off </button>
+        <button type="button" onclick="switchOn()"> On </button>
+        <button type="button" onclick="switchOff()"> Off </button>
+        <img src="https://xiot.io/wp-content/uploads/2018/03/cropped-XIOT-Bright-Background.png" alt="XIOT">
     </body>
 </html>
