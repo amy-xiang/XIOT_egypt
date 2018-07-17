@@ -4,7 +4,10 @@
         <title> Toggle Switch </title>
         <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
         <meta charset="UTF-8">
-        <script src="simple_switch.js"> </script> 
+        <script src="toggle_switch.js"> </script> 
+        <script>
+            var switchState = 0; 
+        </script>
         <style>
             body {
                background: black;
@@ -45,7 +48,7 @@
     <body>
         <h1> Toggle Switch </h1>
         <!-- Initially set the button off  -->
-        <button type="button" onclick="switchOn()"> On </button>
+        <button type="button" onclick="switchState = switchChange(switchState);"> On </button>
         <img src="https://xiot.io/wp-content/uploads/2018/03/cropped-XIOT-Bright-Background.png" alt="XIOT">
     </body>
 </html>
