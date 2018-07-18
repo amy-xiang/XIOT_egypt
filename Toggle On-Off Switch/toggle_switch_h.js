@@ -1,31 +1,46 @@
+// There is one button on the webpage that alternates between on and off. Each time it's clicked, 
+// it triggers the switchChange function which checks the state of the switchState variable and then
+// acts accordingly by modifying the url and the data.
+
 function switchChange(switchState) {
-    if (switchState == 0) {
-        switchState = 1; 
+    if (!switchState) {
+        // If the switch is off, turn it on 
+        switchState = true; 
         var url = 'http://blynk-cloud.com/2674d23861f547c990b570a742954151/update/D14';
         var data = {payload: ["1"]};
         
+        // Update the text on the DOM to reflect the status of the xChip
         var output = document.getElementsByTagName("button")[0];
         output.innerHTML = "On";
+        
+        var status = document.getElementsByTagName("h2")[0];
+        status.innerHTML = "xChip Status: OFF";
     }
     else {
-        switchState = 0; 
+        // If the switch is on, turn it off
+        switchState = false; 
         var url = 'http://blynk-cloud.com/2674d23861f547c990b570a742954151/update/D4'
         var data = {payload: ["0"]};
 
+        // Update the text on the DOM to reflect the status of the xChip
         var output = document.getElementsByTagName("button")[0];
         output.innerHTML = "Off";
+
+        var status = document.getElementsByTagName("h2")[0];
+        status.innerHTML = "xChip Status: ON";
     }
 
     // Fetch a PUT Request
-    // fetch(url, {
-    //     method: 'PUT', 
-    //     body: JSON.stringify(data), 
-    //     headers: {
-    //         'Content-Type': 'application/json' 
-    //     }
-    // })
-    // .then(res => res.json())
-    // .catch(error => console.error('Error:', error))
-    // .then(response => console.log('Success:', response));
+    fetch(url, {
+        method: 'PUT', 
+        body: JSON.stringify(data), 
+        headers: {
+            'Content-Type': 'application/json' 
+        }
+    })
+    .then(res => res.json())
+    .catch(error => console.error('Error:', error))
+    .then(response => console.log('Success:', response));
+
     return switchState;
 }

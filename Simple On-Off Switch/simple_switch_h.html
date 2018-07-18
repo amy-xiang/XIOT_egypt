@@ -4,7 +4,7 @@
         <title> Simple Switch </title>
         <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
         <meta charset="UTF-8">
-        <script src="simple_switch.js"> </script> 
+        <script src="simple_switch_h.js"> </script> 
         <style>
             body {
                background: black;
@@ -16,6 +16,18 @@
             h1 {
                 font-size: 140px;
                 margin-top: 25px;
+            }
+            
+            h2 {
+                margin-top: -75px;
+                margin-bottom: 50px;
+                font-size: 50px;
+                color: yellow;
+            }
+
+            h2:hover{
+                transition: 0.3s;
+                color: white; 
             }
             
             button {
@@ -43,7 +55,10 @@
         </style>
     </head>
     <body>
+        <!-- A simple webpage with two buttons--on and off. When clicked, it'll
+        trigger a PUT request that can be found within simple_switch_h.js. -->
         <h1> Simple Switch </h1>
+        <h2> xChip Status: OFF </h2> 
         <button type="button" onclick="switchOn()"> On </button>
         <button type="button" onclick="switchOff()"> Off </button>
         <img src="https://xiot.io/wp-content/uploads/2018/03/cropped-XIOT-Bright-Background.png" alt="XIOT">
