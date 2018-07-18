@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang='en-US'>
     <head>
-        <title>Simple Switch</title>
+        <title>Toggle Switch</title>
         <meta charset="UTF-8"/>
         <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+        <script src = "ToggleONOFF.js"></script>
+        <script>
+            var toggle = 0;
+        </script>
+
 
         <style>
             body {
@@ -22,7 +27,12 @@
             h2 {
                 font-size: 50px;
                 color: gray;
+                margin-bottom: -5px;
                 
+            }
+
+            .update{
+                font-size: 20px;
             }
 
             button {
@@ -32,19 +42,10 @@
                 text-align: center;
                 font-size: 16px;
                 cursor: pointer;
-                margin-top: -20px;
+                margin-top: 10px;
+                background-color: #4CAF50; 
             }
 
-            .on {
-                background-color: #4CAF50;    
-            }
-            
-            button:hover {
-                transition: 0.4s;
-                background: black;
-                color: white;
-
-            }
             
         
         </style>
@@ -53,9 +54,9 @@
     <body>
         <img class='xiot' src="https://xiot.io/wp-content/uploads/2018/03/cropped-XIOT-Bright-Background.png" alt="XIOT">
         <h2>Toggle Switch</h2>
-        <button class='on' type="button"> ON </button>
+        <h1 class='update'>xChip is currently OFF</h1>
+        <button type="button" onclick="toggle = toggle_switch(toggle);"> ON </button>
 
-        
     </body>
 
 </html>
