@@ -1,8 +1,10 @@
 function switchon()
 {
+    // variable declaration of needed assets
     var url = 'http://blynk-cloud.com/2674d23861f547c990b570a742954151/update/D14';
     var data = {payload: ["1"]};
 
+    
     fetch(url, {
         method: 'PUT', 
         body: JSON.stringify(data), 
