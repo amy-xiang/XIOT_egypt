@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <title> Simple Switch </title>
+        <title> Toggle Switch </title>
         <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
         <meta charset="UTF-8">
-        <script src="simple_switch_h.js"> </script> 
+        <script src="toggle_switch.js"> </script> 
+        <script>
+            // Define global variable that will maintain the state of the button
+            var switchState = false; 
+        </script>
         <style>
             body {
                background: black;
@@ -17,7 +21,7 @@
                 font-size: 140px;
                 margin-top: 25px;
             }
-            
+
             h2 {
                 margin-top: -75px;
                 margin-bottom: 50px;
@@ -45,22 +49,21 @@
                 font-weight: bold;
             }
 
-            img {
-                width: 10%;
+            img {   
+                width: 20%;
                 height: auto;
-                position: absolute;
-                bottom:0px;
-                right:20px;
+                position: fixed;
+                bottom:-50px;
+                right: -40px;
             }
         </style>
     </head>
     <body>
-        <!-- A simple webpage with two buttons--on and off. When clicked, it'll
-        trigger a PUT request that can be found within simple_switch_h.js. -->
-        <h1> Simple Switch </h1>
+        <h1> Toggle Switch </h1>
         <h2> xChip Status: OFF </h2> 
-        <button type="button" onclick="switchOn()"> On </button>
-        <button type="button" onclick="switchOff()"> Off </button>
-        <img src="https://xiot.io/wp-content/uploads/2018/03/cropped-XIOT-Bright-Background.png" alt="XIOT">
+        <!-- A webpage with one button. Initially set the button off 
+        When clicked, it'll trigger a PUT request that can be found within toggle_switch_h.js -->
+        <button type="button" onclick="switchState = switchChange(switchState);"> Start </button>
+        <img src="C:\Users\Helen\Documents\GitHub\xiot_egypt\Simple On-Off Switch\Helen\xChip.png" alt="XIOT">
     </body>
 </html>
