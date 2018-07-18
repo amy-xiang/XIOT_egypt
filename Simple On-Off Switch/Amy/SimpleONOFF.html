@@ -1,17 +1,26 @@
+<!-- declaring html document type -->
 <!DOCTYPE html>
+
+<!-- setting html language -->
 <html lang='en-US'>
+
     <head>
+        <!-- setting up the html document: tab headers, character sets, font styles and linking other scripts -->
         <title>Simple Switch</title>
         <meta charset="UTF-8"/>
         <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
         <script src="simpleONOFF.js"></script>
 
+        <!-- styling the different aspects of the webpage  -->
         <style>
+            
+            /* changing the font style of the website and centering the text */
             body {
                 font-family: 'Questrial', sans-serif;
                 text-align: center;
             }
 
+            /* formatting the XIOT logo picture */
             .xiot {
                 display: block;
                 margin-left: auto;
@@ -20,12 +29,14 @@
                 width: 30%;
             }
 
+            /* styling and formating the 'Simple Switch' text */
             h2 {
                 font-size: 50px;
                 color: gray;
                 
             }
 
+            /* styling the on/off buttons */
             button {
                 border: none;
                 color: white;
@@ -36,14 +47,17 @@
                 margin-top: -20px;
             }
 
+            /* different color 'on' button  */
             .on {
                 background-color: #4CAF50;    
             }
 
+            /* different color 'off' button */
             .off {
                 background-color: rgb(219, 87, 87);
             }
             
+            /* styling the button hover */
             button:hover {
                 transition: 0.4s;
                 background: black;
@@ -56,8 +70,12 @@
     </head>
 
     <body>
+
+        <!-- text and images associated with styling of the website -->
         <img class='xiot' src="https://xiot.io/wp-content/uploads/2018/03/cropped-XIOT-Bright-Background.png" alt="XIOT">
         <h2>Simple Switch</h2>
+
+        <!-- creating the on/off buttons along with delaring what happens on click -->
         <button class='on' type="button" onclick='switchon()'> ON </button>
         <button class='off' type="button" onclick='switchoff()'> OFF </button>
         

@@ -27,8 +27,19 @@ function toggle_switch(toggle)
         textchange.innerHTML = "xChip is Currently OFF";
 
     }
+
+    fetch(url, {
+        method: 'PUT', 
+        body: JSON.stringify(data), 
+        headers: {
+            'Content-Type': 'application/json' 
+        }
+    })
+    .then(res => res.json())
+    .catch(error => console.error('Error:', error))
+    .then(response => console.log('Success:', response));
+    
+
     return toggle;
-
-
 
 }
