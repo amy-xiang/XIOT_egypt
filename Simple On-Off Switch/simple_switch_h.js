@@ -6,6 +6,9 @@ function switchOn() {
     var url = 'http://blynk-cloud.com/2674d23861f547c990b570a742954151/update/D14';
     var data = {payload: ["1"]};
 
+    var output = document.getElementsByTagName("h2")[0];
+    output.innerHTML = "xChip Status: ON";
+
     // Fetch a PUT Request
     makeRequest(url, data); 
 }
@@ -14,6 +17,9 @@ function switchOff() {
     // To switch the xChip off, define the url and data as follows
     var url = 'http://blynk-cloud.com/2674d23861f547c990b570a742954151/update/D4';
     var data = {payload: ["0"]};
+
+    var output = document.getElementsByTagName("h2")[0];
+    output.innerHTML = "xChip Status: OFF";
 
     // Fetch a PUT Request
     makeRequest(url, data); 
