@@ -6,7 +6,8 @@
         <meta charset="UTF-8">
         <script src="toggle_switch_h.js"> </script> 
         <script>
-            var switchState = 0; 
+            // Define global variable that will maintain the state of the button
+            var switchState = false; 
         </script>
         <style>
             body {
@@ -47,7 +48,8 @@
     </head>
     <body>
         <h1> Toggle Switch </h1>
-        <!-- Initially set the button off  -->
+        <!-- A webpage with one button. Initially set the button off 
+        When clicked, it'll trigger a PUT request that can be found within toggle_switch_h.js -->
         <button type="button" onclick="switchState = switchChange(switchState);"> On </button>
         <img src="https://xiot.io/wp-content/uploads/2018/03/cropped-XIOT-Bright-Background.png" alt="XIOT">
     </body>
