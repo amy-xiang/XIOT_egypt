@@ -3,7 +3,7 @@
 
 function switchOn() {
     // To switch the xChip on, define the url and data as follows
-    var url = 'http://blynk-cloud.com/2674d23861f547c990b570a742954151/update/D14';
+    var url = 'http://blynk-cloud.com/5a13704de48e4400b0a62214e8e7b354/update/D4';
     var data = {payload: ["1"]};
 
     var status = document.getElementsByTagName("h2")[0];
@@ -15,7 +15,7 @@ function switchOn() {
 
 function switchOff() {
     // To switch the xChip off, define the url and data as follows
-    var url = 'http://blynk-cloud.com/2674d23861f547c990b570a742954151/update/D4';
+    var url = 'http://blynk-cloud.com/5a13704de48e4400b0a62214e8e7b354/update/D4';
     var data = {payload: ["0"]};
 
     var status = document.getElementsByTagName("h2")[0];

@@ -6,7 +6,7 @@ function switchChange(switchState) {
     if (!switchState) {
         // If the switch is off, turn it on 
         switchState = true; 
-        var url = 'http://blynk-cloud.com/2674d23861f547c990b570a742954151/update/D14';
+        var url = 'http://blynk-cloud.com/5a13704de48e4400b0a62214e8e7b354/update/D4';
         var data = {payload: ["1"]};
         
         // Update the text on the DOM to reflect the status of the xChip
@@ -19,7 +19,7 @@ function switchChange(switchState) {
     else {
         // If the switch is on, turn it off
         switchState = false; 
-        var url = 'http://blynk-cloud.com/2674d23861f547c990b570a742954151/update/D4'
+        var url = 'http://blynk-cloud.com/5a13704de48e4400b0a62214e8e7b354/update/D4'
         var data = {payload: ["0"]};
 
         // Update the text on the DOM to reflect the status of the xChip
