@@ -3,11 +3,13 @@
 // acts accordingly by modifying the url and the data.
 
 function switchChange(switchState) {
+    // Where the data represents the body
+    var data = {};
     if (!switchState) {
         // If the switch is off, turn it on 
         switchState = true; 
-        var url = 'http://blynk-cloud.com/5a13704de48e4400b0a62214e8e7b354/update/D4';
-        var data = {payload: ["1"]};
+        var url = 'https://blynk-cloud.com/5a13704de48e4400b0a62214e8e7b354/update/D4';
+        data.payload = ["1"];
         
         // Update the text on the DOM to reflect the status of the xChip
         var output = document.getElementsByTagName("button")[0];
@@ -19,8 +21,8 @@ function switchChange(switchState) {
     else {
         // If the switch is on, turn it off
         switchState = false; 
-        var url = 'http://blynk-cloud.com/5a13704de48e4400b0a62214e8e7b354/update/D4'
-        var data = {payload: ["0"]};
+        var url = 'https://blynk-cloud.com/5a13704de48e4400b0a62214e8e7b354/update/D4'
+        data.payload = ["0"];
 
         // Update the text on the DOM to reflect the status of the xChip
         var output = document.getElementsByTagName("button")[0];
@@ -30,9 +32,30 @@ function switchChange(switchState) {
         status.innerHTML = "xChip Status: ON";
     }
 
-    // Fetch a PUT Request
+    // USING XMLHttpRequest
+    // var request = new XMLHttpRequest();
+
+    // request.open('PUT', url, true);
+    // request.setRequestHeader("Content-Type", "application/json");
+    // // // request.setRequestHeader("Access-Control-Allow-Origin", "*");
+    // // // request.setRequestHeader("Access-Control-Allow-Headers", "Content-Type");
+    // // // request.setRequestHeader("Access-Control-Allow-Methods", "PUT");
+
+    // request.onreadystatechange = function () {
+    //     if (this.readyState === 4) {
+    //       console.log('Headers:', this.getAllResponseHeaders());
+    //       console.log('Body:', data);
+    //     }
+    //   };
+
+    // request.send(JSON.stringify(data));
+    
+
+
+    /***********************************************************/
+    // USING FETCH
     fetch(url, {
-        method: 'PUT', 
+        method: 'POST', 
         body: JSON.stringify(data), 
         headers: {
             'Content-Type': 'application/json' 
