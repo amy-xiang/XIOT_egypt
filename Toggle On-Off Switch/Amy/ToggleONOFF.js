@@ -3,7 +3,7 @@ function toggle_switch(toggle)
     if (toggle == 0)
     {
         toggle = 1;
-        var url = 'http://blynk-cloud.com/2674d23861f547c990b570a742954151/update/D14';
+        var url = 'http://blynk-cloud.com/5a13704de48e4400b0a62214e8e7b354/update/D4';
         var data = {payload: ["1"]};
 
         var output = document.getElementsByTagName("button")[0];
@@ -16,7 +16,7 @@ function toggle_switch(toggle)
     else
     {
         toggle = 0;
-        var url = 'http://blynk-cloud.com/2674d23861f547c990b570a742954151/update/D4'
+        var url = 'http://blynk-cloud.com/5a13704de48e4400b0a62214e8e7b354/update/D4'
         var data = {payload: ["0"]};
 
         var output = document.getElementsByTagName("button")[0];
