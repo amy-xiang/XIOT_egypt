@@ -1,7 +1,7 @@
 // Create a POST request using Node.js requests 
 
 // To turn on the light
-function switchOn() {
+window.switchOn = function() {
     var request = require('request');
 
     // QUESTION: Why not this one?
@@ -32,7 +32,7 @@ function switchOn() {
 };
 
 // To turn off the light 
-function switchOff() {
+window.switchOff = function() {
     var request = require('request');
 
     var headers = {
@@ -60,4 +60,4 @@ function switchOff() {
 
 
 // FOR TESTING
-switchOn();
+// switchOn();
