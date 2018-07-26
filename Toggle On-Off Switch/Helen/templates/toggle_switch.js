@@ -33,37 +33,35 @@ function switchChange(switchState) {
     }
 
     // USING XMLHttpRequest
-    // var request = new XMLHttpRequest();
+    var request = new XMLHttpRequest();
 
-    // request.open('PUT', url, true);
-    // request.setRequestHeader("Content-Type", "application/json");
-    // // // request.setRequestHeader("Access-Control-Allow-Origin", "*");
-    // // // request.setRequestHeader("Access-Control-Allow-Headers", "Content-Type");
-    // // // request.setRequestHeader("Access-Control-Allow-Methods", "PUT");
+    request.open('PUT', url, true);
+    request.setRequestHeader("Content-Type", "application/json");
+    // // request.setRequestHeader("Access-Control-Allow-Origin", "*");
+    // // request.setRequestHeader("Access-Control-Allow-Headers", "Content-Type");
+    // // request.setRequestHeader("Access-Control-Allow-Methods", "PUT");
 
-    // request.onreadystatechange = function () {
-    //     if (this.readyState === 4) {
-    //       console.log('Headers:', this.getAllResponseHeaders());
-    //       console.log('Body:', data);
-    //     }
-    //   };
+    request.onreadystatechange = function () {
+        if (this.readyState === 4) {
+        //   console.log('Headers:', this.getAllResponseHeaders());
+          console.log('Body:', data);
+        }
+      };
 
-    // request.send(JSON.stringify(data));
-    
-
+    request.send(JSON.stringify(data));
 
     /***********************************************************/
     // USING FETCH
-    fetch(url, {
-        method: 'POST', 
-        body: JSON.stringify(data), 
-        headers: {
-            'Content-Type': 'application/json' 
-        }
-    })
-    .then(res => res.json())
-    .catch(error => console.error('Error:', error))
-    .then(response => console.log('Success:', response));
+    // fetch(url, {
+    //     method: 'POST', 
+    //     body: JSON.stringify(data), 
+    //     headers: {
+    //         'Content-Type': 'application/json' 
+    //     }
+    // })
+    // .then(res => res.json())
+    // .catch(error => console.error('Error:', error))
+    // .then(response => console.log('Success:', response));
 
     return switchState;
 }
