@@ -2,11 +2,15 @@
 
 /*****************************************************************************/
 // To turn on the light
+<<<<<<< HEAD
+window.switchon = function() {
+=======
 // To run with browserify (on the browser)
 // window.switchOn = function() {
 
 // To run with Node.js on terminal
 function switchOn() {
+>>>>>>> 0d105f30ac432e7a935f0a07ad59646300f1257b
     var request = require('request');
 
     // QUESTION: Why not this one?
