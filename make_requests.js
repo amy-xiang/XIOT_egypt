@@ -1,7 +1,7 @@
 // Create a POST request using Node.js requests 
 
 // To turn on the light
-window.switchOn = function() {
+window.switchon = function() {
     var request = require('request');
 
     // QUESTION: Why not this one?
