@@ -7,8 +7,8 @@ from make_requests import handleLightSwitch, handleOutletSwitch
 app = Flask(__name__)
 
 # Define two global variables  
-TURN_ON = 1
-TURN_OFF = 0
+TURN_ON = '[1]'
+TURN_OFF = '[0]'
 
 # Home page
 @app.route("/")
@@ -47,14 +47,14 @@ def chooseOutlet():
 def outletOn():
     handleOutletSwitch(TURN_ON)
     # Update the HTML page
-    return render_template('simple_switch.html')
+    return render_template('outlet_switch.html')
 
 # If the user turns the outlet off
 @app.route("/outlet_off")
 def outletOff():
     handleOutletSwitch(TURN_OFF)
     # Update the HTML page
-    return render_template('simple_switch.html')    
+    return render_template('outlet_switch.html')    
 # ---------------------------------------------------------
 
 # Run the server 
