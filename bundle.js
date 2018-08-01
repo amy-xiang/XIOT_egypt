@@ -32829,15 +32829,19 @@ function extend() {
 }
 
 },{}],189:[function(require,module,exports){
-// Create a POST request using Node.js requests 
+// MAKE A POST REQUEST TO TURN THE LIGHT ON/OFF
 
+/*****************************************************************************/
 // To turn on the light
-function switchOn() {
+// To run with browserify (on the browser)
+window.switchOn = function() {
+
+// To run with Node.js on terminal
+// function switchOn() {
     var request = require('request');
 
     // QUESTION: Why not this one?
     // var request = require('http');
-
 
     var headers = {
         'Content-Type': 'application/json'
@@ -32846,7 +32850,7 @@ function switchOn() {
     var dataString = '[1]';
 
     var options = {
-        url: 'http://blynk-cloud.com/5a13704de48e4400b0a62214e8e7b354/update/D4',
+        url: 'https://blynk-cloud.com/5a13704de48e4400b0a62214e8e7b354/update/D4',
         method: 'POST',
         headers: headers,
         body: dataString
@@ -32863,7 +32867,11 @@ function switchOn() {
 };
 
 // To turn off the light 
-function switchOff() {
+// To run with browserify
+window.switchOff = function() {
+
+// To run with Node.js on terminal
+// function switchOff() {
     var request = require('request');
 
     var headers = {
@@ -32873,7 +32881,7 @@ function switchOff() {
     var dataString = '[0]';
 
     var options = {
-        url: 'http://blynk-cloud.com/5a13704de48e4400b0a62214e8e7b354/update/D4',
+        url: 'https://blynk-cloud.com/5a13704de48e4400b0a62214e8e7b354/update/D4',
         method: 'POST',
         headers: headers,
         body: dataString
@@ -32886,12 +32894,26 @@ function switchOff() {
     }
 
     console.log("Turning the light bulb OFF...");
-    request(options, callback);
+    
+
+    request(options, callback)
+
+     // Check status code
+     .on('response', function(response) {
+        console.log(response.statusCode)
+    });
 };
 
 
 // FOR TESTING
 // switchOn();
+// switchOff();
+
+/****************************************************************/
+
+/****************************************************************/
+// MAKE REQUESTS WITH FETCH
+
 
 },{"request":299}],190:[function(require,module,exports){
 'use strict';
